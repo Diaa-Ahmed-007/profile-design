@@ -67,7 +67,7 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody> {
                 onPressed: () {
                   currentPage -= 1;
                   pageController.animateToPage(currentPage,
-                      duration: const Duration(milliseconds: 100),
+                      duration: const Duration(milliseconds: 300),
                       curve: Curves.bounceIn);
                   setState(() {});
                 },
@@ -91,7 +91,7 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody> {
                 } else {
                   currentPage += 1;
                   pageController.animateToPage(currentPage,
-                      duration: const Duration(milliseconds: 100),
+                      duration: const Duration(milliseconds: 300),
                       curve: Curves.bounceIn);
                 }
               },

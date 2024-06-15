@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:profile_design/core/utils/routes.dart';
+import 'package:profile_design/core/utils/text_styles.dart';
 
 class PageViewItem extends StatelessWidget {
   const PageViewItem({
@@ -38,15 +38,15 @@ class PageViewItem extends StatelessWidget {
                   Navigator.pushReplacementNamed(context, Routes.home);
                 },
                 child: Text(
-                  "skip",
-                  style: GoogleFonts.poppins(
-                      color: Theme.of(context).colorScheme.secondary,
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.w600),
+                  "Skip",
+                  style: TextStyles.onBoardingLabel.copyWith(fontSize: 16.sp),
                 ),
               ),
             ),
           ),
+        ),
+        SizedBox(
+          height: 40.h,
         ),
         Row(
           mainAxisAlignment: mainAxisAlignment,
@@ -56,23 +56,19 @@ class PageViewItem extends StatelessWidget {
         SizedBox(
           height: 76.h,
         ),
-        Text(
-          title,
-          style: GoogleFonts.poppins(
-              color: Theme.of(context).colorScheme.secondary,
-              fontSize: 18.sp,
-              fontWeight: FontWeight.w600),
+        Expanded(
+          child: Text(
+            title,
+            style: TextStyles.onBoardingLabel,
+          ),
         ),
-        SizedBox(
-          height: 18.h,
-        ),
-        Text(
-          description,
-          textAlign: TextAlign.center,
-          style: TextStyle(
-              fontSize: 12.sp,
-              fontWeight: FontWeight.w400,
-              color: const Color(0xff6E838F)),
+        Expanded(
+          flex: 2,
+          child: Text(
+            description,
+            textAlign: TextAlign.center,
+            style: TextStyles.onBoardingSubLabel,
+          ),
         ),
       ],
     );
