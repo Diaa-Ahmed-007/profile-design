@@ -33,7 +33,6 @@ class TextStyles {
     double responsiveFontSize = fontSize * scaleFactor;
     double lowerLimit = fontSize * 0.6;
     double upperLimit = fontSize * 1.4;
-    log("fontSize: $fontSize,lowerLimit: $lowerLimit,upperLimit: $upperLimit,final fontSize: ${responsiveFontSize.clamp(lowerLimit, upperLimit)}");
     return responsiveFontSize.clamp(lowerLimit, upperLimit);
   }
 

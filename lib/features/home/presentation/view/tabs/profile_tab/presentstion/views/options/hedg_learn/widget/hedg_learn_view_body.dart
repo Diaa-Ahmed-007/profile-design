@@ -9,29 +9,29 @@ class HedgLearnViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(14.0 ),
+      padding: const EdgeInsets.all(14.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const SizedBox(
-            height: 15 ,
+            height: 15,
           ),
           Text(
             "Book Your Expert Session",
             style: TextStyles.titles,
           ),
           const SizedBox(
-            height: 10 ,
+            height: 10,
           ),
           Text(
             "Our team of experts is here to advise you on how to get the best value for your money. Book a free session now with our experts.",
             style: TextStyles.settingLabels.copyWith(
                 color: const Color(0xff808DB5),
-                fontSize: 10 ,
+                fontSize: 10,
                 fontWeight: FontWeight.w400),
           ),
           const SizedBox(
-            height: 20 ,
+            height: 20,
           ),
           CustomBookTimaWidget(
               onTap: () async {
@@ -102,7 +102,6 @@ class HedgLearnViewBody extends StatelessWidget {
         return Theme(
           data: ThemeData.light().copyWith(
             datePickerTheme: DatePickerThemeData(
-
               backgroundColor: Colors.white,
               headerBackgroundColor: Colors.green[400],
               headerForegroundColor: Colors.white,
@@ -157,7 +156,6 @@ class HedgLearnViewBody extends StatelessWidget {
         );
       },
     );
-    if (picked != null && picked != DateTime.now()) {
-    }
+    if (picked != null && picked != DateTime.now()) {}
   }
 }
