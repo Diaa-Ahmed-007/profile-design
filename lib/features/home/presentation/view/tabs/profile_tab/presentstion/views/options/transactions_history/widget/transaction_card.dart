@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:profile_design/core/utils/assets.dart';
 import 'package:profile_design/core/utils/text_styles.dart';
@@ -13,11 +12,11 @@ class TransactionCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
       child: Container(
-        padding: EdgeInsets.all(10.sp),
-        margin: EdgeInsets.symmetric(horizontal: 12.w, vertical: 8.h),
+        padding: const EdgeInsets.all(10 ),
+        margin: const EdgeInsets.symmetric(horizontal: 12 , vertical: 8 ),
         decoration: BoxDecoration(
           color: Theme.of(context).colorScheme.primary,
-          borderRadius: BorderRadius.circular(5.r),
+          borderRadius: BorderRadius.circular(5 ),
           border: Border.all(color: const Color(0xffD5E6FF), width: 1),
         ),
         child: Row(
@@ -29,20 +28,20 @@ class TransactionCard extends StatelessWidget {
                 Text(
                   transactionModel.history,
                   style: TextStyles.settingLabels
-                      .copyWith(fontSize: 13.sp, fontWeight: FontWeight.w600),
+                      .copyWith(fontSize: 13 , fontWeight: FontWeight.w600),
                 ),
                 Row(
                   children: [
                    transactionModel.isSvg? SvgPicture.asset(
                       transactionModel.transactionWayImage,
                     ):Image.asset(transactionModel.transactionWayImage),
-                    SizedBox(
-                      width: 2.w,
+                    const SizedBox(
+                      width: 2 ,
                     ),
                     Text(
                       transactionModel.transactionWayInfo,
                       style: TextStyles.settingLabels.copyWith(
-                          fontSize: 10.sp, fontWeight: FontWeight.w500),
+                          fontSize: 10 , fontWeight: FontWeight.w500),
                     ),
                   ],
                 )
@@ -52,7 +51,7 @@ class TransactionCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Padding(
-                  padding: EdgeInsets.only(right: 5.w),
+                  padding: const EdgeInsets.only(right: 5 ),
                   child: Row(
                     children: [
                       Text(
@@ -61,11 +60,11 @@ class TransactionCard extends StatelessWidget {
                             color: transactionModel.inTransaction
                                 ? Colors.green
                                 : Colors.red,
-                            fontSize: 14.sp,
+                            fontSize: 14 ,
                             fontWeight: FontWeight.w700),
                       ),
-                      SizedBox(
-                        width: 4.w,
+                      const SizedBox(
+                        width: 4 ,
                       ),
                       transactionModel.inTransaction
                           ? SvgPicture.asset(Assets.assetsImagesInTransaction)

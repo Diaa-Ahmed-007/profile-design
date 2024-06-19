@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OptionSections extends StatelessWidget {
   const OptionSections({super.key, required this.buttonsList});
@@ -7,14 +6,14 @@ class OptionSections extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(16.w),
-      margin: EdgeInsets.all(16.w),
+      padding: const EdgeInsets.all(16),
+      margin: const EdgeInsets.all(16),
       decoration: BoxDecoration(
           boxShadow: [
-            BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 10.r)
+            BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 10)
           ],
           color: Theme.of(context).colorScheme.primary,
-          borderRadius: BorderRadius.circular(10.r)),
+          borderRadius: BorderRadius.circular(10)),
       child: Column(
         children: buttonsList,
       ),

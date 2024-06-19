@@ -1,19 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:profile_design/features/home/presentation/view/home_view.dart';
+import 'package:profile_design/features/home/presentation/view/tabs/profile_tab/presentstion/views/options/about_us/about_us_view.dart';
 import 'package:profile_design/features/home/presentation/view/tabs/profile_tab/presentstion/views/options/bank%20information/bank_info_view.dart';
 import 'package:profile_design/features/home/presentation/view/tabs/profile_tab/presentstion/views/options/bank%20information/widgets/delete_bank_account.dart';
 import 'package:profile_design/features/home/presentation/view/tabs/profile_tab/presentstion/views/options/bank%20information/widgets/delete_bank_account_done.dart';
+import 'package:profile_design/features/home/presentation/view/tabs/profile_tab/presentstion/views/options/change_language/change_language_view.dart';
 import 'package:profile_design/features/home/presentation/view/tabs/profile_tab/presentstion/views/options/hedg_learn/hedg_learn_view.dart';
+import 'package:profile_design/features/home/presentation/view/tabs/profile_tab/presentstion/views/options/insights%20&%20performance/insights_and_performance_view.dart';
 import 'package:profile_design/features/home/presentation/view/tabs/profile_tab/presentstion/views/options/my_account/my_account_view.dart';
 import 'package:profile_design/features/home/presentation/view/tabs/profile_tab/presentstion/views/options/settings/settings_option/FAQs/faqs_view.dart';
 import 'package:profile_design/features/home/presentation/view/tabs/profile_tab/presentstion/views/options/settings/settings_option/delete_account/delete_account_view.dart';
 import 'package:profile_design/features/home/presentation/view/tabs/profile_tab/presentstion/views/options/settings/settings_option/notifications_settings/notifications_settings_view.dart';
 import 'package:profile_design/features/home/presentation/view/tabs/profile_tab/presentstion/views/options/settings/settings_option/privacy/privacy_view.dart';
 import 'package:profile_design/features/home/presentation/view/tabs/profile_tab/presentstion/views/options/settings/settings_option/security/options/add_change_phone_num/add_or_change_phone_number_view.dart';
-import 'package:profile_design/features/home/presentation/view/tabs/profile_tab/presentstion/views/options/settings/settings_option/security/options/add_change_trusted_contact/add_or_change_trusted_contact.dart';
-import 'package:profile_design/features/home/presentation/view/tabs/profile_tab/presentstion/views/options/settings/settings_option/security/options/change_security_question/change_security_question.dart';
+import 'package:profile_design/features/home/presentation/view/tabs/profile_tab/presentstion/views/options/settings/settings_option/security/options/add_change_trusted_contact/add_or_change_trusted_contact_view.dart';
+import 'package:profile_design/features/home/presentation/view/tabs/profile_tab/presentstion/views/options/settings/settings_option/security/options/change_security_question/change_security_question_view.dart';
 import 'package:profile_design/features/home/presentation/view/tabs/profile_tab/presentstion/views/options/settings/settings_option/security/security_view.dart';
 import 'package:profile_design/features/home/presentation/view/tabs/profile_tab/presentstion/views/options/settings/settings_view.dart';
+import 'package:profile_design/features/home/presentation/view/tabs/profile_tab/presentstion/views/options/support/support_view.dart';
+import 'package:profile_design/features/home/presentation/view/tabs/profile_tab/presentstion/views/options/terms%20&%20conditions/terms_conditions_view.dart';
 import 'package:profile_design/features/home/presentation/view/tabs/profile_tab/presentstion/views/options/transactions_history/transactions_history_view.dart';
 import 'package:profile_design/features/onboarding/presentation/view/onboarding_view.dart';
 import 'package:profile_design/features/splash/presentation/view/splash_view.dart';
@@ -46,6 +51,11 @@ class Routes {
       "AddOrChangeTrustedContactView";
   static const String changeUserNameView = "ChangeUserNameView";
   static const String changeEmailView = "ChangeEmailView";
+  static const String aboutUsView = "AboutUsView";
+  static const String termsAndConditionsView = "TermsAndConditionsView";
+  static const String insightsAndPerformanceView = "InsightsAndPerformanceView";
+  static const String supportView = "SupportView";
+  static const String changeLanguageView = "ChangeLanguageView";
   static Map<String, Widget Function(BuildContext)> getRoutes() {
     return {
       Routes.splash: (context) => const SplashView(),
@@ -70,9 +80,16 @@ class Routes {
       Routes.addOrChangePhoneNumberView: (context) =>
           const AddOrChangePhoneNumberView(),
       Routes.addOrChangeTrustedContactView: (context) =>
-          const AddOrChangeTrustedContact(),
+          const AddOrChangeTrustedContactView(),
       Routes.changeUserNameView: (context) => const ChangeUserNameView(),
       Routes.changeEmailView: (context) => const ChangeEmailView(),
+      Routes.aboutUsView: (context) => const AboutUsView(),
+      Routes.termsAndConditionsView: (context) =>
+          const TermsAndConditionsView(),
+      Routes.insightsAndPerformanceView: (context) =>
+          const InsightsAndPerformanceView(),
+      Routes.changeLanguageView: (context) => const ChangeLanguageView(),
+      Routes.supportView: (context) => const SupportView(),
     };
   }
 }

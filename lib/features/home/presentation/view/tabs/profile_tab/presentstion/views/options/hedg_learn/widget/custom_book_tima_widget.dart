@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:profile_design/core/styles/app_colors.dart';
 import 'package:profile_design/core/utils/text_styles.dart';
 
@@ -17,11 +16,11 @@ class CustomBookTimaWidget extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: EdgeInsets.all(12.sp),
-        margin: EdgeInsets.all(8.sp),
+        padding: const EdgeInsets.all(12 ),
+        margin: const EdgeInsets.all(8 ),
         decoration: BoxDecoration(
             color: Theme.of(context).colorScheme.primary,
-            borderRadius: BorderRadius.circular(15.r),
+            borderRadius: BorderRadius.circular(15 ),
             border: Border.all(
                 color: Theme.of(context).colorScheme.onSecondary, width: 2)),
         child: Row(
@@ -30,9 +29,9 @@ class CustomBookTimaWidget extends StatelessWidget {
             Text(
               title,
               style: TextStyles.settingLabels
-                  .copyWith(fontSize: 12.sp, fontWeight: FontWeight.w400),
+                  .copyWith(fontSize: 12 , fontWeight: FontWeight.w400),
             ),
-            Icon(icon, color: AppColors.textColor, size: 22.sp)
+            Icon(icon, color: AppColors.textColor, size: 22 )
           ],
         ),
       ),

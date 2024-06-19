@@ -30,12 +30,12 @@ environment:
 dependencies:
   awesome_bottom_bar: ^1.2.4
   cupertino_icons: ^1.0.6
+  device_preview: ^1.2.0
   dots_indicator: ^3.0.0
   dropdown_button2: ^2.3.9
   flutter:
     sdk: flutter
   flutter_phone_number_field: ^1.0.1
-  flutter_screenutil: ^5.9.1
   flutter_svg: ^2.0.10+1
   google_fonts: ^6.2.1
   provider: ^6.1.2

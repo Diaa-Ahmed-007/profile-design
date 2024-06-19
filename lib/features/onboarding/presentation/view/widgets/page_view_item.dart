@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:profile_design/core/utils/routes.dart';
 import 'package:profile_design/core/utils/text_styles.dart';
@@ -30,7 +29,7 @@ class PageViewItem extends StatelessWidget {
           maintainSemantics: true,
           visible: isVisible,
           child: Padding(
-            padding: EdgeInsets.only(right: 10.w, top: 40.h),
+            padding: const EdgeInsets.only(right: 10, top: 40),
             child: Align(
               alignment: Alignment.topRight,
               child: TextButton(
@@ -39,27 +38,44 @@ class PageViewItem extends StatelessWidget {
                 },
                 child: Text(
                   "Skip",
-                  style: TextStyles.onBoardingLabel.copyWith(fontSize: 16.sp),
+                  style: TextStyles.onBoardingLabel.copyWith(
+                      fontSize: TextStyles.getResponsiveFontSize(context,
+                          fontSize: 16)),
                 ),
               ),
             ),
           ),
         ),
-        SizedBox(
-          height: 40.h,
+        const SizedBox(
+          height: 40,
         ),
-        Row(
-          mainAxisAlignment: mainAxisAlignment,
-          mainAxisSize: MainAxisSize.max,
-          children: [SvgPicture.asset(imagePath)],
+        Expanded(
+          flex: 10,
+          child: AspectRatio(
+            aspectRatio: 2,
+            child: FittedBox(
+              child: Row(
+                mainAxisAlignment: mainAxisAlignment,
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  SvgPicture.asset(
+                    imagePath,
+                    fit: BoxFit.fill,
+                  )
+                ],
+              ),
+            ),
+          ),
         ),
-        SizedBox(
-          height: 76.h,
+        const SizedBox(
+          height: 76,
         ),
         Expanded(
           child: Text(
             title,
-            style: TextStyles.onBoardingLabel,
+            style: TextStyles.onBoardingLabel.copyWith(
+                fontSize:
+                    TextStyles.getResponsiveFontSize(context, fontSize: 18)),
           ),
         ),
         Expanded(
@@ -67,7 +83,9 @@ class PageViewItem extends StatelessWidget {
           child: Text(
             description,
             textAlign: TextAlign.center,
-            style: TextStyles.onBoardingSubLabel,
+            style: TextStyles.onBoardingSubLabel.copyWith(
+                fontSize:
+                    TextStyles.getResponsiveFontSize(context, fontSize: 12)),
           ),
         ),
       ],

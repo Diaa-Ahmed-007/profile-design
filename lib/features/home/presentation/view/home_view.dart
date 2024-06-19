@@ -1,9 +1,9 @@
 import 'package:awesome_bottom_bar/awesome_bottom_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:profile_design/core/utils/assets.dart';
+import 'package:profile_design/core/utils/text_styles.dart';
 import 'package:profile_design/features/home/presentation/view/tabs/explore_tab/presentstion/views/explore_tab_view.dart';
 import 'package:profile_design/features/home/presentation/view/tabs/home_tab/presentstion/views/home_tab_view.dart';
 import 'package:profile_design/features/home/presentation/view/tabs/profile_tab/presentstion/views/profile_tab_view.dart';
@@ -44,6 +44,7 @@ class _HomeViewState extends State<HomeView> {
   int navIndex = 0;
   @override
   Widget build(BuildContext context) {
+    TextStyles.context = context;
     return Scaffold(
       backgroundColor: const Color(0xffF9F9F9),
       //-------nav bar
@@ -53,7 +54,7 @@ class _HomeViewState extends State<HomeView> {
         color: const Color(0xffD1DCE2),
         colorSelected: Theme.of(context).colorScheme.onPrimary,
         indexSelected: navIndex,
-        paddingVertical: 24,
+        paddingVertical: MediaQuery.sizeOf(context).height * 0.025,
         onTap: (int index) => setState(() {
           navIndex = index;
         }),
@@ -62,16 +63,16 @@ class _HomeViewState extends State<HomeView> {
       //-------app bar
       appBar: AppBar(
         title: Padding(
-          padding: EdgeInsets.only(bottom: 10.h),
+          padding: const EdgeInsets.only(bottom: 10),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SvgPicture.asset(
                 Assets.assetsImagesAppBarLogo,
-                height: 50.h,
+                height: 50,
               ),
-              SizedBox(
-                width: 3.w,
+              const SizedBox(
+                width: 3,
               ),
               Column(
                 children: [
@@ -79,14 +80,14 @@ class _HomeViewState extends State<HomeView> {
                     'HEDG',
                     style: GoogleFonts.outfit(
                         color: Theme.of(context).colorScheme.secondary,
-                        fontSize: 20.sp,
+                        fontSize: 20,
                         fontWeight: FontWeight.w900),
                   ),
-                  Text(
+                  const Text(
                     'INVEST IN YOUR MONEY',
                     style: TextStyle(
-                        color: const Color(0xff1B506F),
-                        fontSize: 6.sp,
+                        color: Color(0xff1B506F),
+                        fontSize: 6,
                         fontWeight: FontWeight.w500),
                   )
                 ],
@@ -98,13 +99,13 @@ class _HomeViewState extends State<HomeView> {
           Icon(
             Icons.notifications,
             color: Theme.of(context).colorScheme.onPrimary,
-            size: 22.sp,
+            size: 22,
           ),
-          SizedBox(
-            width: 20.w,
+          const SizedBox(
+            width: 20,
           )
         ],
-        toolbarHeight: 70.h,
+        toolbarHeight: 70,
       ),
       //-------body
       body: tabs[navIndex],

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:profile_design/core/utils/text_styles.dart';
 
 class CustomSwichOptionButton extends StatefulWidget {
@@ -21,7 +20,7 @@ class _CustomSwichOptionButtonState extends State<CustomSwichOptionButton> {
         Text(
           widget.title,
           style: TextStyles.settingLabels
-              .copyWith(fontWeight: FontWeight.w700, fontSize: 11.sp),
+              .copyWith(fontWeight: FontWeight.w700, fontSize: 11),
         ),
         Switch(
           value: widget.isOn,

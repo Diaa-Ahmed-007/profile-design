@@ -5,6 +5,10 @@ class Assets {
   /// assets/images/AboutUs.svg
   static const String assetsImagesAboutUs = "assets/images/AboutUs.svg";
 
+  /// Assets for assetsImagesAboutUsHedgLogo
+  /// assets/images/about_us_hedg_logo.svg
+  static const String assetsImagesAboutUsHedgLogo = "assets/images/about_us_hedg_logo.svg";
+
   /// Assets for assetsImagesAppBarLogo
   /// assets/images/appBarLogo.svg
   static const String assetsImagesAppBarLogo = "assets/images/appBarLogo.svg";
@@ -14,7 +18,7 @@ class Assets {
   static const String assetsImagesBankInformation = "assets/images/BankInformation.svg";
 
   /// Assets for assetsImagesCash
-  /// assets/images/cash.svg
+  /// assets/images/cash.png
   static const String assetsImagesCash = "assets/images/cash.png";
 
   /// Assets for assetsImagesDictionaryLanguageBook
@@ -30,7 +34,7 @@ class Assets {
   static const String assetsImagesInTransaction = "assets/images/inTransaction.svg";
 
   /// Assets for assetsImagesInstaPay
-  /// assets/images/instaPay.svg
+  /// assets/images/instaPay.png
   static const String assetsImagesInstaPay = "assets/images/instaPay.png";
 
   /// Assets for assetsImagesOnBoarding1

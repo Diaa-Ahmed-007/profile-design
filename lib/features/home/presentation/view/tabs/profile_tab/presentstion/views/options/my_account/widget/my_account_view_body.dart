@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_phone_number_field/flutter_phone_number_field.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:profile_design/core/reuseable_componants/cutom_profile_wide_button.dart';
 import 'package:profile_design/core/utils/text_styles.dart';
 import 'package:profile_design/features/home/presentation/view/tabs/profile_tab/presentstion/views/widgets/custom_account_text_field.dart';
@@ -17,14 +16,13 @@ class MyAccountViewBody extends StatelessWidget {
           const ProfileDetailsWidget(
               isEmailVisable: false, isMoreIconVisable: true),
           Container(
-            padding: EdgeInsets.all(20.w),
-            margin: EdgeInsets.all(16.w),
+            padding: const EdgeInsets.all(20),
+            margin: const EdgeInsets.all(16),
             decoration: BoxDecoration(
               color: Theme.of(context).colorScheme.primary,
-              borderRadius: BorderRadius.circular(10.r),
+              borderRadius: BorderRadius.circular(10),
               boxShadow: [
-                BoxShadow(
-                    color: Colors.black.withOpacity(0.05), blurRadius: 10.r)
+                BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 10)
               ],
             ),
             child: Column(
@@ -35,22 +33,22 @@ class MyAccountViewBody extends StatelessWidget {
                   style:
                       TextStyles.titles.copyWith(fontWeight: FontWeight.w700),
                 ),
-                SizedBox(
-                  height: 14.h,
+                const SizedBox(
+                  height: 14,
                 ),
                 customAcountTextField(
                   title: "jacob Smith",
                   controller: TextEditingController(),
                 ),
-                SizedBox(
-                  height: 25.h,
+                const SizedBox(
+                  height: 25,
                 ),
                 customAcountTextField(
                   title: "jacobsmith@example.com",
                   controller: TextEditingController(),
                 ),
-                SizedBox(
-                  height: 25.h,
+                const SizedBox(
+                  height: 25,
                 ),
                 //---------------------------------------------------------------------------
                 FlutterPhoneNumberField(
@@ -61,21 +59,21 @@ class MyAccountViewBody extends StatelessWidget {
                   decoration: InputDecoration(
                     hintText: 'Phone Number',
                     focusedErrorBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10.r),
+                        borderRadius: BorderRadius.circular(10),
                         borderSide:
                             const BorderSide(color: Colors.red, width: 1)),
                     errorBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10.r),
+                        borderRadius: BorderRadius.circular(10),
                         borderSide:
                             const BorderSide(color: Colors.red, width: 1)),
                     hintStyle: TextStyles.settingLabels
-                        .copyWith(fontSize: 10.sp, fontWeight: FontWeight.w400),
+                        .copyWith(fontSize: 10, fontWeight: FontWeight.w400),
                     enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10.r),
+                        borderRadius: BorderRadius.circular(10),
                         borderSide: const BorderSide(
                             color: Color(0xffD5E6FF), width: 1)),
                     focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10.r),
+                        borderRadius: BorderRadius.circular(10),
                         borderSide: const BorderSide(
                             color: Color(0xffD5E6FF), width: 1)),
                   ),
@@ -87,8 +85,8 @@ class MyAccountViewBody extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
-            height: 170.h,
+          const SizedBox(
+            height: 170,
           ),
           CustomProfileWideButton(
             onpressed: () {

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:profile_design/core/reuseable_componants/cutom_profile_wide_button.dart';
 import 'package:profile_design/core/utils/text_styles.dart';
 import 'package:profile_design/features/home/presentation/view/tabs/profile_tab/presentstion/views/options/hedg_learn/widget/custom_book_tima_widget.dart';
@@ -10,29 +9,29 @@ class HedgLearnViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(14.0.sp),
+      padding: const EdgeInsets.all(14.0 ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(
-            height: 15.h,
+          const SizedBox(
+            height: 15 ,
           ),
           Text(
             "Book Your Expert Session",
             style: TextStyles.titles,
           ),
-          SizedBox(
-            height: 10.h,
+          const SizedBox(
+            height: 10 ,
           ),
           Text(
             "Our team of experts is here to advise you on how to get the best value for your money. Book a free session now with our experts.",
             style: TextStyles.settingLabels.copyWith(
                 color: const Color(0xff808DB5),
-                fontSize: 10.sp,
+                fontSize: 10 ,
                 fontWeight: FontWeight.w400),
           ),
-          SizedBox(
-            height: 20.h,
+          const SizedBox(
+            height: 20 ,
           ),
           CustomBookTimaWidget(
               onTap: () async {
@@ -159,7 +158,6 @@ class HedgLearnViewBody extends StatelessWidget {
       },
     );
     if (picked != null && picked != DateTime.now()) {
-      print('Selected date: ${picked.toLocal()}'.split(' ')[0]);
     }
   }
 }

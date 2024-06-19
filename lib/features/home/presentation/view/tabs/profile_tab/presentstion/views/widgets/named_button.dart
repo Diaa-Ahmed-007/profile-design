@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:profile_design/core/styles/app_colors.dart';
 import 'package:profile_design/core/utils/text_styles.dart';
@@ -27,20 +26,24 @@ class NamedButton extends StatelessWidget {
         children: [
           SvgPicture.asset(
             imagePath,
-            height: 17.sp,
+            height: 17,
           ),
-          SizedBox(
-            width: 16.w,
+          const SizedBox(
+            width: 16,
           ),
           Text(
             label,
             style: TextStyles.settingLabels.copyWith(
+                fontSize:
+                    TextStyles.getResponsiveFontSize(context, fontSize: 12),
                 color: isColorRed == true
                     ? const Color(0xffEF5830)
                     : AppColors.textColor),
           ),
           const Spacer(),
-          const Icon(Icons.arrow_forward_ios_sharp)
+          const Icon(
+            Icons.arrow_forward_ios_sharp,
+          )
         ],
       ),
     );

@@ -5,12 +5,24 @@ import 'package:profile_design/features/home/presentation/view/tabs/profile_tab/
 import 'package:profile_design/features/home/presentation/view/tabs/profile_tab/presentstion/views/options/bank%20information/widgets/bank_info_view_body.dart';
 import 'package:provider/provider.dart';
 
-class BankInfoView extends StatelessWidget {
+class BankInfoView extends StatefulWidget {
   const BankInfoView({super.key});
+
+  @override
+  State<BankInfoView> createState() => _BankInfoViewState();
+}
+
+class _BankInfoViewState extends State<BankInfoView> {
+  @override
+  void initState() {
+    super.initState();
+    Provider.of<LestenToBankAccounts>(context, listen: false).bodyIndex = 0;
+  }
   final List<Widget> bankInfoBodyList = const [
     BankInfoViewBody(),
     AddBankAccountBody(),
   ];
+
   @override
   Widget build(BuildContext context) {
     var provider = Provider.of<LestenToBankAccounts>(context);

@@ -22,7 +22,7 @@ class LestenToBankAccounts extends ChangeNotifier {
   getBankAccountList() {
     notifyListeners();
   }
-  int bodyIndex = 0;
+  late int bodyIndex;
   changeBodyIndex(int index) {
     bodyIndex = index;
     notifyListeners();

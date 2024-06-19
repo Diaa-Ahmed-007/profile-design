@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DeleteBankAccountDone extends StatelessWidget {
   const DeleteBankAccountDone({
@@ -20,34 +19,34 @@ class DeleteBankAccountDone extends StatelessWidget {
         body: Align(
           alignment: Alignment.center,
           child: SizedBox(
-            height: 265.h,
-            width: 240.w,
+            height: 265,
+            width: 240,
             child: Stack(
               alignment: Alignment.center,
               children: [
                 Container(
-                  height: 192.h,
-                  width: 240.w,
+                  height: 192,
+                  width: 240,
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.circular(15.r),
+                    borderRadius: BorderRadius.circular(15),
                   ),
-                  child: Column(
+                  child: const Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       SizedBox(
-                        height: 20.h,
+                        height: 20,
                       ),
                       Text(
                         'Done',
                         style: TextStyle(
-                          color: const Color(0xFF00BF54),
-                          fontSize: 18.sp,
+                          color: Color(0xFF00BF54),
+                          fontSize: 18,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
                       SizedBox(
-                        height: 10.h,
+                        height: 10,
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
@@ -55,8 +54,8 @@ class DeleteBankAccountDone extends StatelessWidget {
                           Text(
                             'this bank account has been',
                             style: TextStyle(
-                              color: const Color(0xFF10284A),
-                              fontSize: 12.sp,
+                              color: Color(0xFF10284A),
+                              fontSize: 12,
                               fontFamily: 'Poppins',
                               fontWeight: FontWeight.w400,
                               height: 0,
@@ -65,8 +64,8 @@ class DeleteBankAccountDone extends StatelessWidget {
                           Text(
                             'deleted successfully',
                             style: TextStyle(
-                              color: const Color(0xFF10284A),
-                              fontSize: 12.sp,
+                              color: Color(0xFF10284A),
+                              fontSize: 12,
                               fontFamily: 'Poppins',
                               fontWeight: FontWeight.w400,
                               height: 0,
@@ -77,15 +76,15 @@ class DeleteBankAccountDone extends StatelessWidget {
                     ],
                   ),
                 ),
-                Align(
+                const Align(
                   alignment: Alignment.topCenter,
                   child: CircleAvatar(
-                    backgroundColor: const Color(0xff00BF54),
-                    maxRadius: 40.r,
+                    backgroundColor: Color(0xff00BF54),
+                    maxRadius: 40,
                     child: Icon(
                       Icons.done,
                       color: Colors.white,
-                      size: 40.sp,
+                      size: 40,
                     ),
                   ),
                 ),

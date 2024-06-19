@@ -1,8 +1,8 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:profile_design/core/utils/routes.dart';
+import 'package:profile_design/core/utils/text_styles.dart';
 import 'package:profile_design/features/onboarding/presentation/view/widgets/onboarding_page_view.dart';
 
 class OnboardingViewBody extends StatefulWidget {
@@ -48,11 +48,11 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody> {
               activeShape: const CircleBorder(),
               color: Theme.of(context).colorScheme.secondary.withOpacity(0.3),
               shape: const CircleBorder(),
-              activeSize: Size(9.h, 9.w),
-              size: Size(9.h, 9.w)),
+              activeSize: const Size(9, 9),
+              size: const Size(9, 9)),
         ),
-        SizedBox(
-          height: 57.h,
+        const SizedBox(
+          height: 57,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -75,14 +75,15 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody> {
                   "Back",
                   style: GoogleFonts.poppins(
                     color: Theme.of(context).colorScheme.onPrimary,
-                    fontSize: 14.sp,
+                    fontSize:
+                        TextStyles.getResponsiveFontSize(context, fontSize: 16),
                     fontWeight: FontWeight.w700,
                   ),
                 ),
               ),
             ),
-            SizedBox(
-              width: 20.w,
+            const SizedBox(
+              width: 20,
             ),
             ElevatedButton(
               onPressed: () {
@@ -96,16 +97,17 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody> {
                 }
               },
               style: ElevatedButton.styleFrom(
-                  shape: const CircleBorder(), padding: EdgeInsets.all(16.w)),
+                  shape: const CircleBorder(),
+                  padding: const EdgeInsets.all(16)),
               child: Icon(
                 Icons.arrow_forward_ios_sharp,
-                size: 25.sp,
+                size: MediaQuery.sizeOf(context).width * 0.05,
               ),
             ),
           ],
         ),
-        SizedBox(
-          height: 50.h,
+        const SizedBox(
+          height: 50,
         )
       ],
     );
