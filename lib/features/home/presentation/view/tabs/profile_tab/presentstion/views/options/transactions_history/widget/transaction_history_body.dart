@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:profile_design/core/utils/assets.dart';
 import 'package:profile_design/core/utils/text_styles.dart';
 import 'package:profile_design/features/home/presentation/view/tabs/profile_tab/presentstion/views/options/transactions_history/model/transaction_model.dart';
@@ -13,9 +12,9 @@ class TransactionHistoryBody extends StatelessWidget {
     return CustomScrollView(
       physics: const BouncingScrollPhysics(),
       slivers: [
-        SliverToBoxAdapter(
+        const SliverToBoxAdapter(
           child: SizedBox(
-            height: 15.h,
+            height: 15,
           ),
         ),
         SliverToBoxAdapter(
@@ -71,11 +70,11 @@ class TransactionHistoryBody extends StatelessWidget {
 
   Padding historyTitle({required String history}) {
     return Padding(
-      padding: EdgeInsets.only(top: 20.h, left: 16.w),
+      padding: const EdgeInsets.only(top: 20, left: 16),
       child: Text(
         history,
         style: TextStyles.settingLabels
-            .copyWith(fontSize: 14.sp, fontWeight: FontWeight.w900),
+            .copyWith(fontSize: 14, fontWeight: FontWeight.w900),
       ),
     );
   }

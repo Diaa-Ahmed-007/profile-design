@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomProfileWideButton extends StatelessWidget {
   const CustomProfileWideButton(
@@ -9,19 +8,19 @@ class CustomProfileWideButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left: 8.w, right: 8.w, bottom: 25.h),
+      padding: const EdgeInsets.only(left: 10 , right: 10 , bottom: 25 ),
       child: SizedBox(
         width: double.infinity,
-        height: 50.h,
+        height: 50 ,
         child: ElevatedButton(
             onPressed: onpressed,
             style: ElevatedButton.styleFrom(
                 shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15.r))),
+                    borderRadius: BorderRadius.circular(15 ))),
             child: Text(
               label,
               style: TextStyle(
-                  fontSize: 16.sp,
+                  fontSize: 16,
                   color: Theme.of(context).colorScheme.primary,
                   fontWeight: FontWeight.w500),
             )),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:profile_design/core/utils/assets.dart';
 import 'package:profile_design/core/utils/routes.dart';
 import 'package:profile_design/features/home/presentation/view/tabs/profile_tab/presentstion/views/widgets/named_button.dart';
@@ -10,49 +9,49 @@ class SettingsViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(16.sp),
+      padding: const EdgeInsets.all(16),
       child: Column(
         children: [
-          SizedBox(
-            height: 60.h,
+          const SizedBox(
+            height: 60,
           ),
           Container(
-            padding: EdgeInsets.all(16.sp),
+            padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
               color: Theme.of(context).colorScheme.primary,
-              borderRadius: BorderRadius.circular(15.r),
+              borderRadius: BorderRadius.circular(15),
             ),
-            child: Column(
+            child: const Column(
               children: [
-                const NamedButton(
+                NamedButton(
                     imagePath: Assets.assetsImagesAboutUs,
                     label: "Notifications settings",
                     routeName: Routes.notificationsSettingsView),
                 SizedBox(
-                  height: 17.h,
+                  height: 17,
                 ),
-                const NamedButton(
+                NamedButton(
                     imagePath: Assets.assetsImagesAboutUs,
                     label: "Security",
                     routeName: Routes.securitySettingsView),
                 SizedBox(
-                  height: 17.h,
+                  height: 17,
                 ),
-                const NamedButton(
+                NamedButton(
                     imagePath: Assets.assetsImagesAboutUs,
                     label: "Privacy",
                     routeName: Routes.privacySettingsView),
                 SizedBox(
-                  height: 17.h,
+                  height: 17,
                 ),
-                const NamedButton(
+                NamedButton(
                     imagePath: Assets.assetsImagesAboutUs,
                     label: "FAQs",
                     routeName: Routes.faqsView),
                 SizedBox(
-                  height: 17.h,
+                  height: 17,
                 ),
-                const NamedButton(
+                NamedButton(
                   imagePath: Assets.assetsImagesAboutUs,
                   label: "Delete account",
                   routeName: Routes.deleteAccountView,
@@ -61,28 +60,39 @@ class SettingsViewBody extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
-            height: 30.h,
+          const SizedBox(
+            height: 30,
           ),
           Padding(
-            padding: EdgeInsets.only(left: 25.w),
-            child: Row(
-              children: [
-                const Icon(
-                  Icons.logout_sharp,
-                  color: Color(0xff6E838F),
-                ),
-                SizedBox(
-                  width: 5.w,
-                ),
-                Text(
-                  "Log out",
-                  style: TextStyle(
-                      fontSize: 14.sp,
-                      decoration: TextDecoration.underline,
-                      color: const Color(0xff6E838F)),
-                )
-              ],
+            padding: const EdgeInsets.only(left: 25),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.pushNamedAndRemoveUntil(
+                  context,
+                  Routes.onboarding,
+                  (route) {
+                    return false;
+                  },
+                );
+              },
+              child: const Row(
+                children: [
+                  Icon(
+                    Icons.logout_sharp,
+                    color: Color(0xff6E838F),
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Text(
+                    "Log out",
+                    style: TextStyle(
+                        fontSize: 14,
+                        decoration: TextDecoration.underline,
+                        color: Color(0xff6E838F)),
+                  )
+                ],
+              ),
             ),
           ),
         ],

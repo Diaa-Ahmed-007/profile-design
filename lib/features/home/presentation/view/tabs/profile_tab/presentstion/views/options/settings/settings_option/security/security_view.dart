@@ -9,6 +9,7 @@ class SecurityView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: customSettingAppBar(context, title: "Security"),
       body: const SecurityViewBody(),
     );

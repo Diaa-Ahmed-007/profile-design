@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:profile_design/core/utils/routes.dart';
 import 'package:profile_design/core/utils/text_styles.dart';
 
@@ -20,36 +19,36 @@ class ProfileDetailsWidget extends StatelessWidget {
             : null;
       },
       child: Container(
-        padding: EdgeInsets.all(16.w),
-        margin: EdgeInsets.all(16.w),
+        padding: const EdgeInsets.all(16),
+        margin: const EdgeInsets.all(16),
         decoration: BoxDecoration(
             boxShadow: [
-              BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 10.r)
+              BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 10)
             ],
             color: Theme.of(context).colorScheme.primary,
-            borderRadius: BorderRadius.circular(10.r)),
+            borderRadius: BorderRadius.circular(10)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Row(
               children: [
                 Container(
-                  height: 42.h,
-                  width: 42.w,
+                  height: 42,
+                  width: 42,
                   decoration: BoxDecoration(
                       color: Theme.of(context)
                           .colorScheme
                           .secondary
-                          .withOpacity(0.1),
+                           .withOpacity(0.1),
                       shape: BoxShape.circle),
                   child: Icon(
                     Icons.person,
-                    size: 24.sp,
+                    size: 24,
                     color: Theme.of(context).colorScheme.secondary,
                   ),
                 ),
-                SizedBox(
-                  width: 15.w,
+                const SizedBox(
+                  width: 15,
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -57,26 +56,26 @@ class ProfileDetailsWidget extends StatelessWidget {
                     Text(
                       "Jacob Smith",
                       style: TextStyles.settingLabels.copyWith(
-                          fontSize: 14.sp, fontWeight: FontWeight.w700),
+                          fontSize: 14, fontWeight: FontWeight.w700),
                     ),
                     Visibility(
                       visible: isEmailVisable,
                       child: Text(
                         'jacobsmith@example.com',
                         style: TextStyles.onBoardingLabel.copyWith(
-                            fontSize: 10.sp, fontWeight: FontWeight.w400),
+                            fontSize: 10, fontWeight: FontWeight.w400),
                       ),
                     )
                   ],
                 ),
               ],
             ),
-            SizedBox(
-              width: 15.w,
+            const SizedBox(
+              width: 15,
             ),
             Visibility(
                 visible: isMoreIconVisable,
-                child: Icon(Icons.more_vert_rounded, size: 20.sp))
+                child: const Icon(Icons.more_vert_rounded, size: 20))
           ],
         ),
       ),

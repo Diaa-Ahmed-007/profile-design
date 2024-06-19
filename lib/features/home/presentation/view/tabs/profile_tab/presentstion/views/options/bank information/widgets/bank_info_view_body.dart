@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:profile_design/core/reuseable_componants/cutom_profile_wide_button.dart';
 import 'package:profile_design/core/utils/assets.dart';
@@ -25,13 +24,13 @@ class _BankInfoViewBodyState extends State<BankInfoViewBody> {
           child: CustomScrollView(
             physics: const BouncingScrollPhysics(),
             slivers: [
-              SliverToBoxAdapter(
+              const SliverToBoxAdapter(
                   child: SizedBox(
-                height: 15.h,
+                height: 15,
               )),
               SliverToBoxAdapter(
                 child: Padding(
-                  padding: EdgeInsets.all(20.0.sp),
+                  padding: const EdgeInsets.all(20.0),
                   child: Text(
                     "Bank Accounts",
                     style: TextStyles.titles,
@@ -44,12 +43,12 @@ class _BankInfoViewBodyState extends State<BankInfoViewBody> {
                       return Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          SizedBox(
-                            height: 100.h,
+                          const SizedBox(
+                            height: 100,
                           ),
                           SvgPicture.asset(Assets.assetsImagesEmpty),
-                          SizedBox(
-                            height: 25.h,
+                          const SizedBox(
+                            height: 25,
                           ),
                           Text(
                             "You Don't Have Bank Account\nPlease Add Your Bank Account",
@@ -63,16 +62,19 @@ class _BankInfoViewBodyState extends State<BankInfoViewBody> {
                       bankAccountModel: provider.bankAccountList[index],
                     );
                   },
-                  separatorBuilder: (context, index) => SizedBox(height: 16.h),
+                  separatorBuilder: (context, index) =>
+                      const SizedBox(height: 16),
                   itemCount: provider.bankAccountList.isEmpty
                       ? 1
                       : provider.bankAccountList.length),
             ],
           ),
         ),
-        CustomProfileWideButton(onpressed: () {
-          provider.changeBodyIndex(1);
-        }, label: "Add Bank Account"),
+        CustomProfileWideButton(
+            onpressed: () {
+              provider.changeBodyIndex(1);
+            },
+            label: "Add Bank Account"),
       ],
     );
   }

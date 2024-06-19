@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:profile_design/core/utils/assets.dart';
 import 'package:profile_design/core/utils/routes.dart';
 import 'package:profile_design/features/home/presentation/view/tabs/profile_tab/presentstion/views/widgets/named_button.dart';
 
 class ButtonsLists {
-  static double hight = 28.h;
+  static double hight = 28;
   static final List<Widget> buttonsList1 = [
     const NamedButton(
       label: 'Bank information',
       imagePath: Assets.assetsImagesBankInformation,
+      
       routeName: Routes.bankInformation,
     ),
     SizedBox(
@@ -26,7 +26,7 @@ class ButtonsLists {
     const NamedButton(
       label: 'Insights And Performance',
       imagePath: Assets.assetsImagesPreformance,
-      routeName: '',
+      routeName: Routes.insightsAndPerformanceView,
     ),
     SizedBox(
       height: hight,
@@ -50,7 +50,7 @@ class ButtonsLists {
     const NamedButton(
       label: 'About Us',
       imagePath: Assets.assetsImagesAboutUs,
-      routeName: '',
+      routeName: Routes.aboutUsView,
     ),
     SizedBox(
       height: hight,
@@ -58,7 +58,7 @@ class ButtonsLists {
     const NamedButton(
       label: 'Terms & Conditions',
       imagePath: Assets.assetsImagesTermsAndConditions,
-      routeName: '',
+      routeName: Routes.termsAndConditionsView,
     ),
     SizedBox(
       height: hight,
@@ -66,7 +66,7 @@ class ButtonsLists {
     const NamedButton(
       label: 'Change Language, تغير اللغة',
       imagePath: Assets.assetsImagesDictionaryLanguageBook,
-      routeName: '',
+      routeName: Routes.changeLanguageView,
     ),
     SizedBox(
       height: hight,
@@ -74,7 +74,7 @@ class ButtonsLists {
     const NamedButton(
       label: 'Support',
       imagePath: Assets.assetsImagesSupport,
-      routeName: '',
+      routeName: Routes.supportView,
     ),
   ];
 }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:profile_design/core/styles/app_colors.dart';
 
 class AppTheme {
@@ -19,8 +18,9 @@ class AppTheme {
         style: ButtonStyle(enableFeedback: false)),
     iconButtonTheme:
         const IconButtonThemeData(style: ButtonStyle(enableFeedback: false)),
-    
-    appBarTheme: const AppBarTheme(backgroundColor: AppColors.primary),
+    appBarTheme: const AppBarTheme(
+      backgroundColor: AppColors.primary,
+    ),
     colorScheme: ColorScheme.fromSeed(
         seedColor: AppColors.primary,
         primary: AppColors.primary,
@@ -29,4 +29,5 @@ class AppTheme {
         error: AppColors.errorColor,
         onSecondary: AppColors.onSecondary),
   );
+ 
 }
